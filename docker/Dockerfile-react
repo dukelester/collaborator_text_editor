@@ -1,0 +1,7 @@
+FROM node:17-alpine
+WORKDIR /client_frontend
+COPY collaborative-text-editor/package.json .
+RUN npm install --force
+COPY ./collaborative-text-editor/ .
+EXPOSE 3000
+CMD ["npm", "start"]

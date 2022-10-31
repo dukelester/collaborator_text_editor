@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  backend_server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile-node
+    container_name: backend_server
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./backend_server:/backend_server
+      - ./backend_server/node_modules
+  client_frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile-react
+    container_name: client_frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./client_frontend:/client_frontend
+      - ./client_frontend/node_modules
