@@ -5,14 +5,21 @@ import express, { Request, Response } from 'express'
 import cors from "cors";
 import { ServerSocket } from './socket';
 import { config } from './config/config';
+import path from 'path';
 
 
 const app = express();
 app.use(cors());
 
-app.get("/", (req: Request, res: Response) =>{
-    res.send("Hello there")
-});
+app.use(express.static(path.join(__dirname, "/collaborative-text-editor/build")));
+app.get("*", function(_, res: Response) {
+    res.sendFile(path.join(__dirname,  "/collaborative-text-editor/build/index.html"),
+    function (error) {
+        if (error){
+            res.status(500).send(error)
+        }
+    })
+})
 
 const server = app.listen(config.server.port, () => console.log(`Server learning at http://localhost:${config.server.port}`))
 
