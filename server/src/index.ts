@@ -11,9 +11,9 @@ import path from 'path';
 const app = express();
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "/collaborative-text-editor/build")));
+app.use(express.static(path.join(__dirname, "../public/build")));
 app.get("*", function(_, res: Response) {
-    res.sendFile(path.join(__dirname,  "/collaborative-text-editor/build/index.html"),
+    res.sendFile(path.join(__dirname,  "../public/build/index.html"),
     function (error) {
         if (error){
             res.status(500).send(error)
