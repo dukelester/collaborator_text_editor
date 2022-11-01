@@ -47,6 +47,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Client side folder structure
 
+```
 ── package.json
 ├── package-lock.json
 ├── public
@@ -73,3 +74,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 │   ├── reportWebVitals.ts
 │   └── setupTests.ts
 └── tsconfig.json
+```
