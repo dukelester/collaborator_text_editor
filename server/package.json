@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "the backend api",
-  "main": "index.js",
+  "main": "build/index.js",
   "typings": "module",
   "scripts": {
     "test": "jest",
