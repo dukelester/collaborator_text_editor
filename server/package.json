@@ -6,7 +6,7 @@
   "typings": "module",
   "scripts": {
     "test": "jest",
-    "start": "node build/index.js",
+    "start": "node src/index.js",
     "dev": "nodemon src/index.ts",
     "postinstall": "tsc"
   },
