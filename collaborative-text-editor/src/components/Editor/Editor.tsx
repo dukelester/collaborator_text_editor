@@ -7,7 +7,7 @@ const Editor = () => {
   const [text, setText] = useState("")
   const [users, setUsers] = useState([]);
 
-const socket  = useSocket('ws://localhost:5000',
+const socket  = useSocket('https://realtimetexteditor.herokuapp.com/',
 { reconnectionAttempts: 5, reconnectionDelay: 5 , autoConnect: false})
 
   useEffect(() => {
