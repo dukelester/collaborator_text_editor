@@ -8,6 +8,8 @@ cd into the server `cd /server`
 
 ## Here is the folder structure
 
+---
+```
 server
 ├── package.json
 ├── package-lock.json
@@ -18,10 +20,13 @@ server
 │   ├── socket.test.js
 │   └── socket.ts
 └── tsconfig.json
+---
+```
 
 Building the application
 'tsc' This will compile the Typescript code into JS and store it in the build folder.
 The folder structure should be
+```
 ├── build
 │   ├── config
 │   │   └── config.js
@@ -57,5 +62,6 @@ The folder structure should be
 │   ├── socket.test.js
 │   └── socket.ts
 └── tsconfig.json
+```
 
 To run the application after the build with `tsc` which will happen immediately after `npm install` command, use the `npm start`
