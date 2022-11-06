@@ -1,0 +1,19 @@
+name: GitHub Actions for Collaborative Text Editor
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on: [push]
+jobs:
+  Collaborative-Text-Editor-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Welcome to the actions for the Collaborative Text Editor repository"
+      - run: echo "This runs in the ${{ github.event_name }} event."
+      - run: echo "This job runs on ${{ runner.os }}"
+      - run: echo "The name of the branch is ${{ github.ref }}"
+      - name: Check out the repository code
+        uses: actions/checkout@v1
+      - run: echo "The ${{ github.repository}} repository has been cloned ..."
+      - run: echo "testing the code ...."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "The job status is now ${{ job.status }}"
